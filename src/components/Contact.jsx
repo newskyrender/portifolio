@@ -51,6 +51,7 @@ const actions = [
     icon: Download,
     label: 'Baixar Currículo PDF',
     href: '/doc/Curriculo_Carlos_Eduardo_Stramandinoli_2026.pdf',
+    downloadName: 'Curriculo_Carlos_Eduardo_Stramandinoli_2026.pdf',
     color: 'bg-purple-600 hover:bg-purple-700',
   },
 ]
@@ -118,7 +119,7 @@ export default function Contact() {
                 href={action.href}
                 target={action.href.startsWith('http') ? '_blank' : undefined}
                 rel={action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                download={action.href.endsWith('.pdf') ? true : undefined}
+                download={action.downloadName ?? (action.href.endsWith('.pdf') ? true : undefined)}
                 className={`${action.color} text-white flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-medium transition-all`}
               >
                 <action.icon size={16} />

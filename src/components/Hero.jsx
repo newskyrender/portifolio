@@ -66,7 +66,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="/doc/Curriculo_Carlos_Eduardo_Stramandinoli_2026.pdf"
-            download
+            download="Curriculo_Carlos_Eduardo_Stramandinoli_2026.pdf"
             className="flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary-500/25"
           >
             <Download size={18} />
