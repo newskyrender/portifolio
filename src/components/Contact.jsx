@@ -1,62 +1,58 @@
 import { useEffect, useRef, useState } from 'react'
 import { Mail, Phone, MapPin, MessageCircle, Send, Github, Download } from 'lucide-react'
 
-const contactInfo = [
+const contactInfoMeta = [
   {
     icon: Mail,
-    label: 'E-mail',
     value: 'stramandinoli.consultoria@gmail.com',
     href: 'mailto:stramandinoli.consultoria@gmail.com',
   },
   {
     icon: Mail,
-    label: 'E-mail alternativo',
     value: 'newskyrender@gmail.com',
     href: 'mailto:newskyrender@gmail.com',
   },
   {
     icon: Phone,
-    label: 'Telefone',
     value: '(15) 99177-4430',
     href: 'tel:+5515991774430',
   },
   {
     icon: MapPin,
-    label: 'Localização',
     value: 'Mairinque – SP, Brasil',
     href: null,
   },
 ]
 
-const actions = [
+const actionMeta = [
   {
     icon: MessageCircle,
-    label: 'WhatsApp',
+    key: 'whatsapp',
     href: 'https://wa.me/5515991774430',
     color: 'bg-green-600 hover:bg-green-700',
   },
   {
     icon: Send,
-    label: 'Enviar E-mail',
+    key: 'email',
     href: 'mailto:stramandinoli.consultoria@gmail.com',
     color: 'bg-primary-600 hover:bg-primary-700',
   },
   {
     icon: Github,
-    label: 'GitHub',
-    href: 'https://github.com/',
+    key: 'github',
+    href: 'https://github.com/newskyrender',
     color: 'bg-dark-700 hover:bg-dark-600',
   },
   {
     icon: Download,
-    label: 'Baixar Currículo PDF',
+    key: 'resume',
     href: '/doc/Curriculo_Carlos_Eduardo_Stramandinoli_2026.pdf',
     downloadName: 'Curriculo_Carlos_Eduardo_Stramandinoli_2026.pdf',
     color: 'bg-purple-600 hover:bg-purple-700',
   },
 ]
 
-export default function Contact() {
+export default function Contact({ content }) {
   const [visible, setVisible] = useState(false)
   const ref = useRef(null)
 
@@ -69,17 +65,31 @@ export default function Contact() {
     return () => observer.disconnect()
   }, [])
 
+  const contactInfo = [
+    { ...contactInfoMeta[0], label: content.infoLabels.email },
+    { ...contactInfoMeta[1], label: content.infoLabels.alternateEmail },
+    { ...contactInfoMeta[2], label: content.infoLabels.phone },
+    { ...contactInfoMeta[3], label: content.infoLabels.location },
+  ]
+
+  const actions = [
+    { ...actionMeta[0], label: 'WhatsApp' },
+    { ...actionMeta[1], label: content.actions.email },
+    { ...actionMeta[2], label: 'GitHub' },
+    { ...actionMeta[3], label: content.actions.resume },
+  ]
+
   return (
     <section id="contact" className="py-24 px-4 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-900/5 to-transparent" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <p className="section-comment mb-4">{'// CONTATO'}</p>
+        <p className="section-comment mb-4">{content.comment}</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Vamos <span className="gradient-text">Conversar?</span>
+          {content.headingPrefix} <span className="gradient-text">{content.headingHighlight}</span>
         </h2>
         <p className="text-dark-400 mb-12 max-w-xl">
-          Estou disponível para novos projetos, consultoria técnica ou oportunidades de liderança.
+          {content.description}
         </p>
 
         <div
@@ -87,7 +97,6 @@ export default function Contact() {
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          {/* Contact info */}
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
             {contactInfo.map((item) => (
               <div key={item.label} className="flex items-start gap-4 group">
@@ -111,11 +120,10 @@ export default function Contact() {
             ))}
           </div>
 
-          {/* Action buttons */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {actions.map((action) => (
               <a
-                key={action.label}
+                key={action.key}
                 href={action.href}
                 target={action.href.startsWith('http') ? '_blank' : undefined}
                 rel={action.href.startsWith('http') ? 'noopener noreferrer' : undefined}

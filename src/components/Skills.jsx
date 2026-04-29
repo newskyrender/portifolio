@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 
 const skillCategories = [
   {
-    title: 'BACKEND',
     skills: [
       { name: '.NET Framework / Core 2–9', level: 95 },
       { name: 'C# / ASP.NET MVC / Web API', level: 95 },
@@ -11,7 +10,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'ARQUITETURA',
     skills: [
       { name: 'Microservices', level: 90 },
       { name: 'DDD / CQRS', level: 90 },
@@ -20,7 +18,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'FRONTEND',
     skills: [
       { name: 'React / Next.js', level: 65 },
       { name: 'Angular', level: 55 },
@@ -29,7 +26,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'MENSAGERIA & AUTH',
     skills: [
       { name: 'RabbitMQ / MassTransit', level: 90 },
       { name: 'OAuth 2.0 / JWT', level: 85 },
@@ -38,7 +34,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'BANCO DE DADOS',
     skills: [
       { name: 'SQL Server', level: 90 },
       { name: 'Oracle 11g / 19c', level: 85 },
@@ -47,7 +42,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'ORM / ACESSO A DADOS',
     skills: [
       { name: 'Entity Framework Core', level: 90 },
       { name: 'Dapper', level: 85 },
@@ -56,7 +50,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'CLOUD & DEVOPS',
     skills: [
       { name: 'Azure (DevOps, App Services)', level: 85 },
       { name: 'AWS (Lambda, S3, RDS)', level: 65 },
@@ -65,7 +58,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'IA & LLMs',
     skills: [
       { name: 'GitHub Copilot', level: 90 },
       { name: 'ChatGPT / OpenAI Codex', level: 90 },
@@ -74,7 +66,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'OBSERVABILIDADE',
     skills: [
       { name: 'Grafana', level: 80 },
       { name: 'Zabbix', level: 75 },
@@ -82,7 +73,6 @@ const skillCategories = [
     ],
   },
   {
-    title: 'LEGADO',
     skills: [
       { name: 'Delphi 5 / 7 / 2007', level: 90 },
       { name: 'VB6', level: 60 },
@@ -100,7 +90,7 @@ function getBarColor(level) {
   return 'from-red-400 to-orange-400'
 }
 
-export default function Skills() {
+export default function Skills({ content }) {
   const [visible, setVisible] = useState(false)
   const ref = useRef(null)
 
@@ -118,25 +108,25 @@ export default function Skills() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-900/5 to-transparent" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <p className="section-comment mb-4">{'// HABILIDADES'}</p>
+        <p className="section-comment mb-4">{content.comment}</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Stack <span className="gradient-text">Técnica</span>
+          {content.headingPrefix} <span className="gradient-text">{content.headingHighlight}</span>
         </h2>
         <p className="text-dark-400 mb-12 max-w-2xl">
-          Dashboard de competências técnicas com base em anos de experiência prática e projetos reais.
+          {content.description}
         </p>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {skillCategories.map((cat, ci) => (
             <div
-              key={cat.title}
+              key={content.categories[ci].title}
               className={`glass rounded-xl p-6 transition-all duration-700 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${ci * 100}ms` }}
             >
               <h3 className="text-primary-400 font-mono font-semibold text-sm mb-5 tracking-wider">
-                {cat.title}
+                {content.categories[ci].title}
               </h3>
 
               <div className="space-y-4">
