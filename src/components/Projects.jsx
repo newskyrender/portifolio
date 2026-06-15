@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Lock, Github } from 'lucide-react'
+import { Lock, Github, ExternalLink } from 'lucide-react'
 
 const projects = [
   {
@@ -33,9 +33,10 @@ const projects = [
     border: 'hover:border-teal-500/30',
   },
   {
-    tags: ['C# ASP.NET', 'Delphi', 'Adobe Flex', 'SQL Server'],
+    tags: ['React + TypeScript', 'Vite', 'Tailwind + shadcn/ui', 'TanStack Query', 'ASP.NET Core 6', 'EF Core + MySQL', 'JWT', 'Swagger', 'Railway'],
     confidential: false,
-    githubUrl: 'https://github.com/newskyrender/portifolio',
+    linkUrl: 'https://imperialpets.com.br/',
+    linkType: 'external',
     gradient: 'from-rose-600/20 to-pink-600/20',
     border: 'hover:border-rose-500/30',
   },
@@ -93,13 +94,13 @@ export default function Projects({ content }) {
                       </div>
                     ) : (
                       <a
-                        href={project.githubUrl}
+                        href={project.linkUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1.5 text-primary-400 text-xs bg-primary-500/10 px-2.5 py-1 rounded-full hover:bg-primary-500/20 transition-colors whitespace-nowrap"
                       >
-                        <Github size={12} />
-                        {content.githubLink}
+                        {project.linkType === 'github' ? <Github size={12} /> : <ExternalLink size={12} />}
+                        {project.linkType === 'github' ? content.githubLink : content.projectLink}
                       </a>
                     )}
                   </div>
