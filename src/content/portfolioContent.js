@@ -161,6 +161,7 @@ export const portfolioContent = {
       headingHighlight: 'Destaque',
       description: 'Alguns dos projetos mais relevantes da minha carreira, desenvolvidos em ambientes de alta complexidade.',
       confidential: 'Confidencial',
+      projectLink: 'Acessar projeto →',
       githubLink: 'Ver mais no GitHub →',
       items: [
         {
@@ -184,8 +185,8 @@ export const portfolioContent = {
           description: 'Integração com SAP módulo FI para pagamento de médicos. Backend C# / ASP.NET com Entity Framework Core e Dapper. Dashboards de observabilidade com Grafana e Zabbix.',
         },
         {
-          title: 'Portal Viajar Barato',
-          description: 'Portal de compra coletiva com back-office administrativo e site público. Desenvolvido com Delphi, C# ASP.NET, Adobe Flex/Flash Builder 4 e SQL Server.',
+          title: 'Imperial Pet Studio (Projeto próprio)',
+          description: 'Plataforma web para pet shop com agendamento online, área administrativa e integração completa com API. Stack resumida: React + TypeScript, Vite, Tailwind/shadcn, TanStack Query, ASP.NET Core 6, Entity Framework Core, MySQL, JWT e Swagger.',
         },
       ],
     },
@@ -391,6 +392,7 @@ export const portfolioContent = {
       headingHighlight: 'Projects',
       description: 'Some of the most relevant projects in my career, built in highly complex environments.',
       confidential: 'Confidential',
+      projectLink: 'Visit project →',
       githubLink: 'See more on GitHub →',
       items: [
         {
@@ -414,8 +416,8 @@ export const portfolioContent = {
           description: 'Integration with SAP FI module for physician payments. C# / ASP.NET backend with Entity Framework Core and Dapper. Observability dashboards with Grafana and Zabbix.',
         },
         {
-          title: 'Viajar Barato Portal',
-          description: 'Group-buying portal with administrative back office and public website. Built with Delphi, C# ASP.NET, Adobe Flex/Flash Builder 4, and SQL Server.',
+          title: 'Imperial Pet Studio (Own project)',
+          description: 'Web platform for pet services with online booking, admin area, and full API integration. Short stack: React + TypeScript, Vite, Tailwind/shadcn, TanStack Query, ASP.NET Core 6, Entity Framework Core, MySQL, JWT, and Swagger.',
         },
       ],
     },
