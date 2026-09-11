@@ -40,7 +40,7 @@ const actionMeta = [
   {
     icon: Github,
     key: 'github',
-    href: 'https://github.com/newskyrender',
+    href: 'https://github.com/stramandinoli-consultoria',
     color: 'bg-dark-700 hover:bg-dark-600',
   },
   {

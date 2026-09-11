@@ -26,7 +26,7 @@ export const portfolioContent = {
       paragraphs: [
         'Desenvolvedor Full Stack Sênior com mais de 18 anos de experiência em sistemas corporativos de alta complexidade, com forte atuação no setor de Saúde & Telemedicina. Especialista no ecossistema .NET (Framework ao .NET 9), com domínio em arquiteturas modernas (Microservices, DDD, CQRS, Hexagonal) e mensageria com RabbitMQ/MassTransit.',
         'Atua com as principais LLMs do mercado (ChatGPT, Claude, GitHub Copilot, Codex, Ollama) como ferramentas de alta produtividade e Engenharia de Prompt aplicada ao desenvolvimento. Autenticação avançada com OAuth 2.0, JWT e Keycloak.',
-        'Experiência em Cloud (Azure, AWS, GCP, Oracle Cloud), CI/CD com Azure DevOps / GitHub / Bitbucket, observabilidade com Grafana e Zabbix, e bancos de dados relacionais e NoSQL. Minha abordagem combina visão estratégica de negócio com excelência técnica, sempre buscando soluções escaláveis e alinhadas com os objetivos do produto.',
+        'Experiência em plataformas bancárias de grande escala, com PIX, TED, DDA, câmbio, Trade Finance, compliance e antifraude. Cloud (Azure, AWS, GCP, Oracle Cloud), CI/CD com Azure DevOps / GitHub / Bitbucket, observabilidade e bancos de dados relacionais e NoSQL.',
       ],
       highlights: [
         { title: '18+ Anos', desc: 'Experiência em desenvolvimento' },
@@ -43,9 +43,23 @@ export const portfolioContent = {
       description: 'Uma trajetória sólida construindo sistemas de missão crítica em empresas de referência no mercado.',
       items: [
         {
+          company: 'DBC Consultoria',
+          role: 'Desenvolvedor Full Stack Sênior / Tech Lead',
+          period: 'Jun/2026 – Atual',
+          location: 'Remoto',
+          tasks: [
+            'Atuação em plataforma bancária core e catálogo de microsserviços de grande escala com .NET 6/7/8, Clean Architecture, DDD e CQRS',
+            'Soluções para PIX, TED, DDA, boleto/cobrança, câmbio, Trade Finance/Deal Capture, compliance e antifraude (PLD/AML)',
+            'Backend resiliente com MediatR, AutoMapper, FluentValidation e Polly; RavenDB, Elasticsearch e SQL Server',
+            'Integrações assíncronas com Apache Kafka, AWS SQS/SNS e RabbitMQ/MassTransit',
+            'Microsserviços em Kubernetes com Rancher e Helm, monitorados e entregues por Azure DevOps; logs estruturados com Serilog',
+            'Autenticação com Keycloak (OAuth 2.0/OIDC) e documentação de arquitetura para integrações com B3, BACEN/SPB, CIP, SCR e Serasa',
+          ],
+        },
+        {
           company: 'Shock Tecnologia Consultoria',
           role: 'Desenvolvedor Full Stack Sênior / Tech Lead',
-          period: 'Jan/2026 – Atual',
+          period: 'Jan/2026 – Jun/2026',
           location: 'Remoto',
           tasks: [
             'Prestação de serviço para clientes como MatriBank e Matri Precatórios em arquitetura moderna e orientada a microsserviços',
@@ -257,7 +271,7 @@ export const portfolioContent = {
       paragraphs: [
         'Senior Full Stack Developer with over 18 years of experience in highly complex enterprise systems, with strong expertise in the Healthcare & Telemedicine sector. Specialist in the .NET ecosystem (Framework through .NET 9), with solid command of modern architectures (Microservices, DDD, CQRS, Hexagonal) and messaging with RabbitMQ/MassTransit.',
         'Works with the leading LLMs in the market (ChatGPT, Claude, GitHub Copilot, Codex, Ollama) as high-productivity tools, applying Prompt Engineering to software development. Advanced authentication with OAuth 2.0, JWT, and Keycloak.',
-        'Experience in Cloud (Azure, AWS, GCP, Oracle Cloud), CI/CD with Azure DevOps / GitHub / Bitbucket, observability with Grafana and Zabbix, and relational and NoSQL databases. My approach combines strategic business vision with technical excellence, always focusing on scalable solutions aligned with product goals.',
+        'Experience with large-scale core banking platforms covering PIX, TED, DDA, foreign exchange, Trade Finance, compliance, and fraud prevention. Cloud (Azure, AWS, GCP, Oracle Cloud), CI/CD with Azure DevOps / GitHub / Bitbucket, observability, and relational and NoSQL databases.',
       ],
       highlights: [
         { title: '18+ Years', desc: 'Software development experience' },
@@ -274,9 +288,23 @@ export const portfolioContent = {
       description: 'A solid track record building mission-critical systems for leading companies in the market.',
       items: [
         {
+          company: 'DBC Consultoria',
+          role: 'Senior Full Stack Developer / Tech Lead',
+          period: 'Jun/2026 – Present',
+          location: 'Remote',
+          tasks: [
+            'Worked on a core banking platform and large-scale microservices catalog with .NET 6/7/8, Clean Architecture, DDD, and CQRS',
+            'Solutions for PIX, TED, DDA, billing, foreign exchange, Trade Finance/Deal Capture, compliance, and fraud prevention (AML)',
+            'Resilient backend with MediatR, AutoMapper, FluentValidation, and Polly; RavenDB, Elasticsearch, and SQL Server',
+            'Asynchronous integrations with Apache Kafka, AWS SQS/SNS, and RabbitMQ/MassTransit',
+            'Microservices on Kubernetes with Rancher and Helm, delivered through Azure DevOps; structured logging with Serilog',
+            'Keycloak authentication (OAuth 2.0/OIDC) and architecture documentation for integrations with B3, BACEN/SPB, CIP, SCR, and Serasa',
+          ],
+        },
+        {
           company: 'Shock Tecnologia Consultoria',
           role: 'Senior Full Stack Developer / Tech Lead',
-          period: 'Jan/2026 – Present',
+          period: 'Jan/2026 – Jun/2026',
           location: 'Remoto',
           tasks: [
             'Provided services for clients such as MatriBank and Matri Precatórios using modern, microservices-oriented architecture',
