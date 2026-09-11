@@ -28,9 +28,9 @@ const skillCategories = [
   {
     skills: [
       { name: 'RabbitMQ / MassTransit', level: 90 },
+      { name: 'Kafka / AWS SQS / SNS', level: 75 },
       { name: 'OAuth 2.0 / JWT', level: 85 },
-      { name: 'Keycloak / Identity Server', level: 75 },
-      { name: 'Swagger / OpenAPI', level: 85 },
+      { name: 'Keycloak / OIDC', level: 80 },
     ],
   },
   {
@@ -53,7 +53,7 @@ const skillCategories = [
     skills: [
       { name: 'Azure (DevOps, App Services)', level: 85 },
       { name: 'AWS (Lambda, S3, RDS)', level: 65 },
-      { name: 'Docker / Kubernetes (conceitos)', level: 70 },
+      { name: 'Docker / Kubernetes / Helm', level: 75 },
       { name: 'GitHub / Bitbucket / CI/CD', level: 85 },
     ],
   },

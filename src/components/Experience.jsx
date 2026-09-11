@@ -3,6 +3,7 @@ import { Building2, Briefcase, Calendar } from 'lucide-react'
 
 const experienceMeta = [
   { icon: Briefcase, color: 'from-blue-500 to-cyan-500' },
+  { icon: Briefcase, color: 'from-cyan-500 to-teal-500' },
   { icon: Briefcase, color: 'from-indigo-500 to-sky-500' },
   { icon: Building2, color: 'from-green-500 to-emerald-500' },
   { icon: Building2, color: 'from-purple-500 to-pink-500' },

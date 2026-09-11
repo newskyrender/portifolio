@@ -66,7 +66,7 @@ export default function Hero({ content }) {
             {content.resumeButton}
           </a>
           <a
-            href="https://github.com/newskyrender"
+            href="https://github.com/stramandinoli-consultoria"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 border border-dark-600 hover:border-primary-500 text-dark-300 hover:text-primary-400 px-8 py-3 rounded-xl font-medium transition-all"
